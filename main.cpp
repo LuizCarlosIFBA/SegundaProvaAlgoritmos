@@ -55,8 +55,12 @@ int menu(){
 	
 	int op;
 	int continuar = 1;
-	do{
-		scanf("%i",&op);
+	do{  
+	    do{
+			scanf("%i",&op);
+			printf(op<1 || op>4?"Escreva apenas numeros de 1 ate 4! Por favor, digite novamente\n":"\n");
+		}while(op<1 || op>4);
+		
 		switch(op){
 			case 1: 
 			       imprimir();
